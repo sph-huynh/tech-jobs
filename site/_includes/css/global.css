@@ -1,0 +1,64 @@
+/* General */
+
+body {
+    margin: 5%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+
+
+/* Homepage */
+
+.intro-text {
+    margin-top: 1%;
+}
+.homepage-container {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.head-sub-text {
+    margin-bottom: 2rem;
+}
+
+.intro-challenges.container {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.intro-challenges.trio {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.intro-challenges.trio.img {
+    width: 100%;
+}
+
+.intro-challenges.trio.text {
+    width: 90%;
+}
+
+.intro-body {
+    margin-bottom: 2rem;
+}
+
+.intro-cta.container {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.intro-cta.main {
+    margin-right: 1em;
+    display: inline-block;
+}
+
+.intro-cta.small {
+    display: inline-block;
+}

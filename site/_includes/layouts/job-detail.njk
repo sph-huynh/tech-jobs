@@ -1,0 +1,14 @@
+{% extends 'layouts/base.njk' %}
+
+{# Intro content #}
+{% set jobTitle = title %}
+{% set jobOutcomeDesc = desc-outcome %}
+
+{% block content %}
+  <main id="main-content" tabindex="-1">
+    {% include "partials/components/spectrum.njk" %}
+    {% include "partials/components/promotion-timeline.njk" %}
+    {% include "partials/components/learn.njk" %}'
+    {% include "partials/components/pathways.njk" %}'
+  </main>
+{% endblock %}
