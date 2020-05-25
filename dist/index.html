@@ -8,8 +8,12 @@
   <link rel="icon" href="" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">  <style>/* General */
 
+html {
+    background-color: #082C56;
+}
+
 body {
-    margin: 5%;
+    padding: 5%;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -19,6 +23,72 @@ header {
     margin-right: 15%;
 }
 
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 3em;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+
+.dark {
+    color: white;
+}
+
+.light {
+    color: #202020;
+}
+
+
+@media all and (max-width: 800px) {
+    body {
+        padding: 0%!important;
+    }
+
+    .homepage-container {
+        padding-left: 7%!important;
+        padding-right: 7%!important;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+    
+    h2 {
+        font-size: 2em;
+    }
+}
+
+@media all and (max-width: 500px) {
+
+    h1 {
+        font-size: 2em!important;
+    }
+    
+    h2 {
+        font-size: 1.5em!important;
+    }
+
+    p {
+        font-size: 1em!important;
+    }
+}
 
 
 /* Homepage */
@@ -69,7 +139,18 @@ header {
 
 .intro-cta.small {
     display: inline-block;
-}</style>
+}
+
+/* Media query */
+
+@media all and (max-width: 800px) {
+
+    .contained.trio {
+        width: 100%;
+    }
+}
+
+</style>
   
     <header> 
     <button>more</button>
@@ -80,7 +161,7 @@ header {
 <body>
   
 
-<div class="homepage-container">
+<div class="homepage-container dark">
     <div class="intro-text">
         <div class="head-title">
             <h1>Studying ___________ ?</h1>
@@ -91,7 +172,7 @@ header {
         </div>
     </div>
     <div class="intro-challenges container">
-        <div class="intro-challenges trio">
+        <div class="intro-challenges contained trio">
             <div class="intro-challenges trio img">
                 <p>yo</p>
             </div>
@@ -99,7 +180,7 @@ header {
                 <p>People studying computer science, but don’t see themselves coding all day.</p>
             </div>
         </div>
-        <div class="intro-challenges trio">
+        <div class="intro-challenges contained trio">
             <div class="intro-challenges trio img">
                 <p>yo</p>
             </div>
@@ -107,7 +188,7 @@ header {
                 <p>Business students, but you don’t want to spend all day in financial spreadsheets.</p>
             </div>
         </div>
-        <div class="intro-challenges trio">
+        <div class="intro-challenges contained trio">
             <div class="intro-challenges trio img">
                 <p>yo</p>
             </div>
@@ -127,7 +208,7 @@ header {
         </div>
         <div class="intro-cta small">
             <button class="cta">
-                Click here to start.
+                <h4>Click here to start.</h4>
             </button>
         </div>
     </div>
