@@ -1,14 +1,24 @@
 {% extends 'layouts/base.njk' %}
 
-{# Intro content #}
-{% set jobTitle = title %}
-{% set jobOutcomeDesc = desc-outcome %}
-
 {% block content %}
-  <main id="main-content" tabindex="-1">
-    {% include "partials/components/spectrum.njk" %}
-    {% include "partials/components/promotion-timeline.njk" %}
-    {% include "partials/components/learn.njk" %}'
-    {% include "partials/components/pathways.njk" %}'
-  </main>
+<div class="pad-the-contain dark">
+    <div class="intro-text">
+        <div class="head-title">
+            <h1>Career title</h1>
+            <h2>Outcome description</h2>
+        </div>
+    </div>
+</div>
+<div class="pad-the-contain light">
+    <div class="results section container">
+      <div class="results section main">
+        {% include "partials/components/learn.njk" %}
+        {% include "partials/components/pathways.njk" %}
+      </div>
+      <div class="results section small">    
+        {% include "partials/components/spectrum.njk" %}
+        {% include "partials/components/promotion-timeline.njk" %}
+      </div>
+    </div>
+</div>
 {% endblock %}

@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: master 
+publish_mode: editorial_workflow
+media_folder: "images/uploads" 
+media_folder: "static/images/uploads" 
+public_folder: "/images/uploads" 
+
+collections:
+  - name: "careers" 
+    label: "Careers" 
+    folder: "_posts/careers" 
+    create: true 
+    slug: "{{year}}-{{slug}}" 
+    fields: 
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}

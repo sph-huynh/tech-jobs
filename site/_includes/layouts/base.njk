@@ -12,7 +12,12 @@
     {% include "partials/global/site-head.njk" %}
   {% endblock %}
 </head>
-<body>
+{% if layout == "homepage" %}
+<body class="bg-dark">
+{% elseif layout == "results" %}
+<body class="bg-light">
+{% else %}
+<body class="bg-light">
   <content>
     {% block content %}
     {% endblock content %}

@@ -9,10 +9,18 @@ html {
 }
 
 body {
-    background-color: #082C56;
+    background-color: #EEEEEE;
     margin: 0!important;
     height: 100%;
     font-family: 'Open Sans', sans-serif;
+}
+
+.bg-dark {
+    background-color: #082C56;
+}
+
+.bg-light {
+    background-color: #EEEEEE;
 }
 
 content {
@@ -55,6 +63,10 @@ p {
 
 .light {
     color: #202020!important;
+}
+
+.top-margin {
+    margin-top: 4em;
 }
 
 
@@ -129,17 +141,24 @@ p {
     margin-bottom: 2rem;
 }
 
-.intro-cta.container {
+.section.container {
     width: 100%;
     margin-bottom: 2rem;
 }
 
-.intro-cta.main {
+.inline-content {
     margin-right: 2em;
     display: inline-block;
 }
 
-.intro-cta.small {
+.section.main {
+    width: 67%;
+    margin-right: 2em;
+    display: inline-block;
+}
+
+.section.small {
+    width: 28%;
     display: inline-block;
 }
 
@@ -218,3 +237,9 @@ button.drop-menu {
 .drop-menu.top:hover .drop-menu.content {
     display: block;
 }
+
+/* Results */
+.results-job {
+    margin: 0!important;
+}
+

@@ -1,0 +1,25 @@
+{
+    "items": [
+      {
+        "text": "Home",
+        "url": "/",
+        "external": false
+      },
+      {
+        "text": "About",
+        "url": "/about",
+        "external": false
+      },
+      {
+        "text": "Skills",
+        "url": "/skills",
+        "external": false
+      },
+      {
+        "text": "Careers",
+        "url": "/careers",
+        "external": false
+      }
+    ]
+  }
+  

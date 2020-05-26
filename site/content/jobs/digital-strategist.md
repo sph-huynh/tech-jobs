@@ -1,6 +1,6 @@
 ---
 title: DS
-layout: job-detail
+layout: results
 permalink: /digital-strategist
 ---
 
