@@ -18,12 +18,25 @@
 <body class="bg-light">
 {% else %}
 <body class="bg-light">
+{% endif %}
   <content>
     {% block content %}
     {% endblock content %}
   </content>
+  <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body>
 {% block foot %}
   {% include "partials/global/site-foot.njk" %}
 {% endblock %}
+
 </html>
