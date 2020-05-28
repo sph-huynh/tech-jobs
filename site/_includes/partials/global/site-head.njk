@@ -1,12 +1,17 @@
 <header> 
     <div class="drop-menu top">
+        {% if layout == "homepage" %}
         <button class="drop-menu subtle dark fa fa-bars fa-2x">
+        {% elseif layout == "job-detail" %}
+        <button class="drop-menu subtle dark fa fa-bars fa-2x">
+        {% else %}
+        <button class="drop-menu subtle light fa fa-bars fa-2x">
+        {% endif %}
         </button>
         <div class="drop-menu content">
-            <a href="#">About</a>
-            <a href="#">Skills</a>
-            <a href="#">Careers</a>
-        </ul>
-      </ul>
+            {% for link in navigation.items %}
+                <a href="{{ link.url }}" class="light">{{ link.text }}</a>
+            {% endfor %}
+        </div>
     </div>
 </header> 

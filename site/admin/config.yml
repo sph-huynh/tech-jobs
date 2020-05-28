@@ -5,13 +5,73 @@ publish_mode: editorial_workflow
 media_folder: "/assets/images/uploads" 
 public_folder: "/assets/images/uploads" 
 collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "site/content/pages"
+    create: true 
+    slug: "{{slug}}"
+    fields:
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "homepage"
+      - label: "Permalink"
+        name: "permalink"
+        widget: "string"
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Heading 2"
+        name: "heading2"
+        widget: "string"
+      - label: "Heading 3"
+        name: "heading3"
+        widget: "string"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
   - name: "careers" 
     label: "Careers" 
-    folder: "_posts/careers" 
+    folder: "site/content/careers" 
     create: true 
-    slug: "{{year}}-{{slug}}" 
+    slug: "{{slug}}" 
     fields: 
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "job-detail"
+      - label: "Permalink"
+        name: "permalink"
+        widget: "string"
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Short description"
+        name: "outcomedesc"
+        widget: "string"
+      - label: "Full Description"
+        name: "fulldesc"
+        widget: "string"
+      - label: "Extra Curricular"
+        name: "extracurr"
+        widget: []
+      - label: "Books"
+        name: "books"
+        widget: []
+      - label: "Courses"
+        name: "courses"
+        widget: []
+      - label: "Culture"
+        name: "culture"
+        widget: []
+      - label: "Pathways"
+        name: "pathways"
+        widget: []
+      - label: "Career Progression"
+        name: "progression"
+        widget: []
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+
+

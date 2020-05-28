@@ -1,0 +1,18 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+
+<div class="pad-the-contain light">
+    <div class="intro-text">
+        <div class="head-title">
+            <h1>{{ heading2 }}</h1>
+        </div>
+        <div class="head-sub-text">
+            <h2>{{ heading3 }}</h2>
+        </div>
+    </div>
+    <div class="intro-body">
+      {{ content | safe }}
+    </div>
+</div>
+{% endblock %}

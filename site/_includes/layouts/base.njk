@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://use.fontawesome.com/303be55676.js"></script>
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml" />
-  <link rel="icon" href="{{ site.faviconPath }}" type="image/png" />
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">  <style>{% include "css/global.css" %}</style>
-  {% block head %}
-    {% include "partials/global/site-head.njk" %}
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://use.fontawesome.com/303be55676.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml" />
+    <link rel="icon" href="{{ site.faviconPath }}" type="image/png" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">  <style>{% include "css/global.css" %}</style>
+    {% block head %}
+      {% include "partials/global/site-head.njk" %}
+    {% endblock %}
+  </head>
+  {% if layout == "homepage" %}
+  <body class="bg-dark">
+  {% elseif layout == "job-detail" %}
+  <body class="bg-dark">
+  {% else %}
+  <body class="bg-light">
+  {% endif %}
+    <content>
+      {% block content %}
+      {% endblock content %}
+    </content>
+    <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+  {% block foot %}
+    {% include "partials/global/site-foot.njk" %}
   {% endblock %}
-</head>
-{% if layout == "homepage" %}
-<body class="bg-dark">
-{% elseif layout == "results" %}
-<body class="bg-light">
-{% else %}
-<body class="bg-light">
-{% endif %}
-  <content>
-    {% block content %}
-    {% endblock content %}
-  </content>
-  <script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
-</body>
-{% block foot %}
-  {% include "partials/global/site-foot.njk" %}
-{% endblock %}
-
+  </body>
 </html>

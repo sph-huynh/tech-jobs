@@ -1,0 +1,16 @@
+<div class="intro-cta section container">
+    <div class="intro-cta inline-content">
+        <h4>{{ cta-text }}</h4>
+    </div>
+    <div class="intro-cta inline-content">
+        {% if layout == "homepage" %}
+        <button class="cta bg-light light">
+        {% elseif layout == "job-detail" %}
+        <button class="cta bg-light light">
+        {% else %}
+        <button class="cta bg-dark dark">
+        {% endif %}
+            <a href="{{ cta-url }}" class="light">{{ cta }}</a>
+        </button>
+    </div>
+</div>

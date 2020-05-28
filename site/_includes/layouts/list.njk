@@ -1,11 +1,11 @@
 {% extends 'layouts/base.njk' %}
 
 {% block content %}
-<div class="pad-the-contain dark">
+<div class="pad-the-contain light">
     <div class="intro-text">
         <div class="head-title">
             <h1>{{ title }}</h1>
-            <h2>{{ outcomedesc }}</h2>
+            <h2>Explore all skills</h2>
         </div>
     </div>
 </div>
@@ -13,9 +13,16 @@
     <div class="pad-the-contain light">
         <div class="results section container">
         <div class="results section main">
-            {% include "partials/components/full-description.njk" %}
-            {% include "partials/components/learn.njk" %}
-            {% include "partials/components/pathways.njk" %}
+        {% for item in collections.careers %}
+        <ul>
+            <li>
+                <a href="{{ item.url }}">
+                    {{ item.data.title }}
+                </a>
+            </li>
+        </ul>
+        {% endfor %}
+        um
         </div>
         <div class="results section small">    
             {% include "partials/components/spectrum.njk" %}

@@ -1,4 +1,10 @@
-<footer light>
+{% if layout == "homepage" %}
+<footer class="bg-light light">
+{% elseif layout == "job-detail" %}
+<footer class="bg-dark dark">
+{% else %}
+<footer class="bg-dark dark">
+{% endif %}
     <div class="pad-the-contain">
         <p>This website was made by Sophia Huynh.</p>
         <p>Liked it? Helped you make your next career step? Buy me a coffee!</p>

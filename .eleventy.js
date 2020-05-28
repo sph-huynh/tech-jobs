@@ -6,6 +6,9 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addLayoutAlias('results', 'layouts/results.njk');
 	eleventyConfig.addLayoutAlias('job-detail', 'layouts/job-detail.njk');
 	eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
+	eleventyConfig.addLayoutAlias('page', 'layouts/page.njk');
+	eleventyConfig.addLayoutAlias('list', 'layouts/list.njk');
+
 
 
 	eleventyConfig.addPassthroughCopy("site/assets");
