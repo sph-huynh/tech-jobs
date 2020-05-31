@@ -43,9 +43,6 @@ collections:
       - label: "Permalink"
         name: "permalink"
         widget: "string"
-      - label: "tags"
-        name: "Tag"
-        widget: "string"
       - label: "Career"
         name: "career"
         widget: "string"
@@ -73,6 +70,10 @@ collections:
       - label: "Career Progression"
         name: "progression"
         widget: []
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        default: ["careers"]
       - label: "Body"
         name: "body"
         widget: "markdown"
@@ -88,9 +89,6 @@ collections:
         default: "job-detail"
       - label: "Permalink"
         name: "permalink"
-        widget: "string"
-      - label: "tags"
-        name: "Tag"
         widget: "string"
       - label: "Skill"
         name: "skillname"
@@ -113,6 +111,10 @@ collections:
       - label: "Culture"
         name: "culture"
         widget: []
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        default: ["skills"]
       - label: "Body"
         name: "body"
         widget: "markdown"

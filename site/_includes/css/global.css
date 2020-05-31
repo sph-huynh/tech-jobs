@@ -63,6 +63,15 @@ p {
     font-size: 1.2em;
 }
 
+.titled-links {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: rgb(33, 14, 90);
+}
+
+p.descriptions {
+    margin-block-start: .5em!important;
+}
 
 .dark {
     color: white!important;
