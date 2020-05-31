@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: master 
 publish_mode: editorial_workflow
-media_folder: "/assets/images/uploads" 
-public_folder: "/assets/images/uploads" 
+media_folder: "/assets/images/uploads"
+public_folder: "/assets/images/uploads"
 collections:
   - name: "pages"
     label: "Pages"
@@ -30,12 +30,12 @@ collections:
       - label: "Body"
         name: "body"
         widget: "markdown"
-  - name: "careers" 
-    label: "Careers" 
-    folder: "site/content/careers" 
+  - name: "careers"
+    label: "Careers"
+    folder: "site/content/careers"
     create: true 
-    slug: "{{slug}}" 
-    fields: 
+    slug: "{{slug}}"
+    fields:
       - label: "Layout"
         name: "layout"
         widget: "hidden"
@@ -43,8 +43,11 @@ collections:
       - label: "Permalink"
         name: "permalink"
         widget: "string"
-      - label: "Title"
-        name: "title"
+      - label: "tags"
+        name: "Tag"
+        widget: "string"
+      - label: "Career"
+        name: "career"
         widget: "string"
       - label: "Short description"
         name: "outcomedesc"
@@ -73,5 +76,44 @@ collections:
       - label: "Body"
         name: "body"
         widget: "markdown"
-
+  - name: "skills"
+    label: "Skills"
+    folder: "site/content/skills"
+    create: true 
+    slug: "{{slug}}"
+    fields:
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "job-detail"
+      - label: "Permalink"
+        name: "permalink"
+        widget: "string"
+      - label: "tags"
+        name: "Tag"
+        widget: "string"
+      - label: "Skill"
+        name: "skillname"
+        widget: "string"
+      - label: "Short description"
+        name: "outcomedesc"
+        widget: "string"
+      - label: "Full Description"
+        name: "fulldesc"
+        widget: "string"
+      - label: "Extra Curricular"
+        name: "extracurr"
+        widget: []
+      - label: "Books"
+        name: "books"
+        widget: []
+      - label: "Courses"
+        name: "courses"
+        widget: []
+      - label: "Culture"
+        name: "culture"
+        widget: []
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
 

@@ -1,9 +1,9 @@
 ---
 layout: job-detail
-permalink: /careers/digital-strategist/
+permalink: /careers/software-engineer/
 tags: 
     - careers
-career: "Digital Strategist"
+career: "Software Engineer"
 outcomedesc: "Help clients leverage digital capabilities to improve operational efficiency and customer experience"
 fulldesc: "Full desc about DIGI"
 extracurr:  ["example 1", "y", "z"]

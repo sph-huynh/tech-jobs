@@ -7,13 +7,14 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addLayoutAlias('job-detail', 'layouts/job-detail.njk');
 	eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
 	eleventyConfig.addLayoutAlias('page', 'layouts/page.njk');
-	eleventyConfig.addLayoutAlias('list', 'layouts/list.njk');
-
+	eleventyConfig.addLayoutAlias('lists', 'layouts/lists.njk');
 
 
 	eleventyConfig.addPassthroughCopy("site/assets");
 	eleventyConfig.addPassthroughCopy('site/admin');
+	eleventyConfig.addPassthroughCopy("site/content");
 
+	eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
 
 
     return {
